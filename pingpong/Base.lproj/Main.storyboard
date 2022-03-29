@@ -87,7 +87,9 @@
                                 <rect key="frame" x="403" y="132" width="90" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="start"/>
+                                <buttonConfiguration key="configuration" style="plain" title="start">
+                                    <color key="baseForegroundColor" systemColor="systemCyanColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FnL-h7-1OF"/>
                                 </connections>
@@ -96,7 +98,9 @@
                                 <rect key="frame" x="377" y="185" width="134" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Change Side"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Change Side">
+                                    <color key="baseForegroundColor" systemColor="systemCyanColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="ChangeSideButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xp5-dY-MzX"/>
                                 </connections>
@@ -126,18 +130,26 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="NameEnd:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="fg6-Ly-c9f"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6bD-NQ-eRL">
                                 <rect key="frame" x="608" y="36" width="97" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="NameEnd:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="U2W-ml-bM6"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60W-R5-S77">
                                 <rect key="frame" x="403" y="238" width="90" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Reset"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Reset">
+                                    <color key="baseForegroundColor" systemColor="systemCyanColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="resetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AII-Yt-1lj"/>
                                 </connections>
@@ -154,6 +166,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="changeSideOutlet" destination="ibM-ku-GJU" id="SQr-qv-J3m"/>
                         <outlet property="leftNameTextField" destination="v3i-i7-C9m" id="Udo-gI-aWh"/>
                         <outlet property="leftScoreLabel" destination="d63-6J-tvn" id="87S-he-oCg"/>
                         <outlet property="leftScoreOutlet" destination="ic2-qq-hm0" id="XqC-e1-cd7"/>
