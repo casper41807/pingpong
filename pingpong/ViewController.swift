@@ -29,20 +29,25 @@ class ViewController: UIViewController {
     @IBOutlet var viewArray: [UIView]!
     
     var num:Int?
-    
     var leftScore = 0
     var rightScore = 0
-    
     var leftTotalScore = 0
     var rightTotalScore = 0
+    
+    
     //點空白處離開鍵盤
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
             view.endEditing(true)
         }
+    //按return離開鍵盤
+    @IBAction func NameEnd(_ sender: UITextField) {
+        }
+    
     //畫面只提供橫向
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
             .landscape
         }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,9 +105,7 @@ class ViewController: UIViewController {
             }
         }
     }
-    //按return離開鍵盤
-    @IBAction func NameEnd(_ sender: UITextField) {
-    }
+   
     //開始比賽
     @IBAction func startButton(_ sender: UIButton) {
         if let textfield = leftNameTextField.text,let textfield2 = rightNameTextField.text{
@@ -199,31 +202,23 @@ class ViewController: UIViewController {
     func ChangeSide(){
         let exchangeLeftScore = leftScore
         let exchangeRightScore = rightScore
-        
         let exchangeLeftScoreLabel = leftScoreLabel.text
         let exchangeRightScoreLabel = rightScoreLable.text
-       
         let exchangeLeftTotalScore = leftTotalScore
         let exchangeRightTotalScore = rightTotalScore
-        
         let exchangeLeftTotalScoreLabel = leftTotalScoreLable.text
         let exchangeRightTotalScoreLabel = rightTotalScoreLable.text
-        
         let leftTeam = leftTeamLabel.text
         let rightTeam = rightTeamLabel.text
         
         leftScore = exchangeRightScore
         rightScore = exchangeLeftScore
-        
         leftScoreLabel.text = exchangeRightScoreLabel
         rightScoreLable.text = exchangeLeftScoreLabel
-        
         leftTotalScore = exchangeRightTotalScore
         rightTotalScore = exchangeLeftTotalScore
-        
         leftTotalScoreLable.text = exchangeRightTotalScoreLabel
         rightTotalScoreLable.text = exchangeLeftTotalScoreLabel
-        
         leftTeamLabel.text = rightTeam
         rightTeamLabel.text = leftTeam
         if viewArray[0].isHidden == true {
@@ -260,6 +255,5 @@ class ViewController: UIViewController {
             num = 1
         }
     }
-    
 }
 
